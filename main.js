@@ -14,7 +14,38 @@ const https = require("https"),
       timeout = 2*60*1000;
 var servers = [];
 
-//
+
+function leadingZero(d){
+    if(d < 10){
+        return "0" + d;
+    }else{
+        return d;
+    }
+}
+
+// adds a timestamp before msg/err
+function print(msg, err){
+    var date = new Date();
+    var h = leadingZero(date.getHours());
+    var m = leadingZero(date.getMinutes());
+    var s = leadingZero(date.getSeconds());
+
+    console.log("[" + h + ":" + m + ":" + s + "]", msg);
+    if(err){
+        console.log(err);
+    }
+}
+
+function indexOfObjectByName(array, value){
+    for(let i = 0; i < array.length; i++){
+        if(array[i].name.toLowerCase().trim() === value.toLowerCase().trim()){
+            return i;
+        }
+    }
+    return -1;
+}
+
+
 
 function exitHandler(opt, err){
     if(err){
