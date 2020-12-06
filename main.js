@@ -7,7 +7,7 @@ const https = require("https"),
       args = process.argv.slice(2),
       channelPath = __dirname + "/.channels",
       // token = args[0],
-      twitchClientID = args[1],
+      twitchClientID = "gsd0x9yovz7qkjquhucrcsfspvxxpv",
       interval = args[2] * 1000,
       apiUrl = "https://api.twitch.tv/kraken",
       // two minutes
