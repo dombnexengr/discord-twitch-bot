@@ -5,7 +5,7 @@
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
     },
-    "author": "yuki",
+    "author": "dombnexen",
     "license": "GPL-3.0",
 
     "dependencies": {
@@ -15,11 +15,11 @@
 
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/fuyuneko/discord-twitch-bot.git"
+        "url": "git+https://github.com/dombnexengr/discord-twitch-bot.git"
     },
     "bugs": {
-        "url": "https://github.com/fuyuneko/discord-twitch-bot/issues"
+        "url": "https://github.com/dombnexengr/discord-twitch-bot/issues"
     },
-    "homepage": "https://github.com/fuyuneko/discord-twitch-bot#readme",
+    "homepage": "https://github.com/dombnexengr/discord-twitch-bot#readme",
     "description": ""
 }
