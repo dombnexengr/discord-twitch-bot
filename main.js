@@ -6,7 +6,7 @@ const https = require("https"),
       bot = new Discord.Client(),
       args = process.argv.slice(2),
       channelPath = __dirname + "/.channels",
-      token = args[0],
+      // token = args[0],
       twitchClientID = args[1],
       interval = args[2] * 1000,
       apiUrl = "https://api.twitch.tv/kraken",
@@ -373,20 +373,20 @@ bot.on("message", (message)=>{
     }
 });
 
-
-bot.login(token).then((token)=>{
-    if(token){
-        print("Logged in with token " + token);
-        print("Reading file " + channelPath);
-        var file = fs.readFileSync(channelPath, {encoding:"utf-8"});
-        servers = JSON.parse(file);
+client.login(process.env.token);
+//bot.login(token).then((token)=>{
+//    if(token){
+//        print("Logged in with token " + token);
+//        print("Reading file " + channelPath);
+//        var file = fs.readFileSync(channelPath, {encoding:"utf-8"});
+//        servers = JSON.parse(file);
 
         // tick once on startup
-        tick();
-        setInterval(tick, interval);
-    }else{
-        print("An error occured while loging in:", err);
-        process.exit(1);
-    }
-});
+//        tick();
+//        setInterval(tick, interval);
+//    }else{
+//        print("An error occured while loging in:", err);
+//        process.exit(1);
+//    }
+//});
 
