@@ -192,8 +192,8 @@ bot.on("message", (message)=>{
         let index = indexOfObjectByName(servers, message.guild.name);
         if(index == -1){
             servers.push({name: message.guild.name,
-                          lastPrefix: "!", prefix: "/",
-                          role: "botadmin", discordChannels: [],
+                          lastPrefix: "!eg", prefix: "/eg",
+                          role: "bot", discordChannels: [],
                           twitchChannels: []});
             index = servers.length - 1;
         }
